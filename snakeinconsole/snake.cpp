@@ -127,6 +127,5 @@ void Snake::ToStartValues()
 		coord[i].x = Field::sizeX / 2 - offSetOfX;
 		coord[i].y = Field::sizeY / 2;
 	}
-	snakeRot = Rotate::UP;
 }
 
