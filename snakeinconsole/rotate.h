@@ -1,7 +1,6 @@
 #ifndef _ROTATE
 #define _ROTATE
 
-
 enum Rotate
 {
 	LEFT,
@@ -9,8 +8,6 @@ enum Rotate
 	DOWN,
 	UP
 };
-
-
 #endif
 
 

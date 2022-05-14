@@ -139,21 +139,21 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="block.cpp" />
     <ClCompile Include="Console.cpp" />
     <ClCompile Include="field.cpp" />
     <ClCompile Include="Food.cpp" />
-    <ClCompile Include="gameManager.cpp" />
-    <ClCompile Include="rotate.cpp" />
+    <ClCompile Include="menu.cpp" />
     <ClCompile Include="snake.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="block.h" />
     <ClInclude Include="Console.h" />
+    <ClInclude Include="Difficulty.h" />
     <ClInclude Include="field.h" />
     <ClInclude Include="Food.h" />
     <ClInclude Include="gameManager.h" />
+    <ClInclude Include="menu.h" />
     <ClInclude Include="rotate.h" />
     <ClInclude Include="Snake.h" />
   </ItemGroup>
