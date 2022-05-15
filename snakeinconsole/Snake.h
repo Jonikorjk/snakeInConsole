@@ -15,7 +15,7 @@ private:
 public:
 	Snake(size_t t_lenght, Rotate rot);
 	void ToStartValues();
-	void move(Field& field);
+	void clearOldPosition_Move_DrawSnake(Field& field);
 	bool IsOutOfField(const Field& field);
 	bool checkSelfCollision();
 	bool canEatFood(Food* food);

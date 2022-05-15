@@ -48,7 +48,7 @@ void Menu::startGame()
         }
         Event();
         food->DrawFood(field);
-        snake.move(field);
+        snake.clearOldPosition_Move_DrawSnake(field);
         field.drawField();
         if (snake.checkSelfCollision()) gameManager::ChangeStatusAboutGameOverToTrue();
         if (snake.canEatFood(food))

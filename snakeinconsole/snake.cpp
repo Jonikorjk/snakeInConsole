@@ -82,7 +82,7 @@ bool Snake::IsOutOfField(const Field& field)
 	return false;
 }
 
-void Snake::move(Field& field)
+void Snake::clearOldPosition_Move_DrawSnake(Field& field)
 {
 	ClearSnake(field);
 
