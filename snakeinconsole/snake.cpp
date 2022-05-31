@@ -1,5 +1,7 @@
 #include "Snake.h"
 
+
+
 Snake::Snake(size_t t_lenght, Rotate rot) : length(t_lenght), snakeRot(rot)
 {
 	coord.resize(t_lenght);
@@ -34,7 +36,7 @@ int Snake::getLengthOfSnake() { return length; }
 void Snake::EatingFood(Food* food)
 {
 	length++;
-	coord.push_front(block());
+	coord.push_back(block());
 	if (snakeRot == UP)
 	{
 		coord[0].x = coord[1].x;
@@ -86,17 +88,17 @@ void Snake::clearOldPosition_Move_DrawSnake(Field& field)
 {
 	ClearSnake(field);
 
+	//move()
+	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	if (GetAsyncKeyState('W') && snakeRot != DOWN)	snakeRot = UP;
 	if (GetAsyncKeyState('A') && snakeRot != RIGHT) snakeRot = LEFT;
 	if (GetAsyncKeyState('S') && snakeRot != UP)	snakeRot = DOWN;
 	if (GetAsyncKeyState('D') && snakeRot != LEFT)	snakeRot = RIGHT;
-
 	// Передаём координаты так, чтобы блоки под индексами 1 и 0 имели одинаковые координаты, чтобы в будущем поменять координаты у головы
-	for (size_t i = length - 1; i > 0; i--)
+	for (size_t i = length -1; i > 0; i--)
 	{
 		coord[i] = coord[i - 1];
 	}
-
 	switch (snakeRot)
 	{
 		// The x-axis looks right. So right is right, left is left.
@@ -116,6 +118,8 @@ void Snake::clearOldPosition_Move_DrawSnake(Field& field)
 		coord[0].y--;
 		break;
 	}
+	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 	DrawSnake(field);
 }
 

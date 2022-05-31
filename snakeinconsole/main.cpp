@@ -7,6 +7,6 @@ int Field::sizeY = 30;
 
 int main()
 {
-    Menu menu(MONSTER);
+    Menu menu(EASY);
     menu.startGame();
 }
